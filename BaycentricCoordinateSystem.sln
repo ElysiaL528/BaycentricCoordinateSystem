@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaycentricCoordinateSystem", "BaycentricCoordinateSystem\BaycentricCoordinateSystem.csproj", "{B162471B-71BC-4CFC-AB4B-509E2911BFD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B162471B-71BC-4CFC-AB4B-509E2911BFD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B162471B-71BC-4CFC-AB4B-509E2911BFD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B162471B-71BC-4CFC-AB4B-509E2911BFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B162471B-71BC-4CFC-AB4B-509E2911BFD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F1BAB9B-093B-49BC-AD57-D90856872867}
+	EndGlobalSection
+EndGlobal
