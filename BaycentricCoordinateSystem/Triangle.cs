@@ -18,7 +18,6 @@ namespace BaycentricCoordinateSystem
             Vertices = vertices;
             xs = new int[] { Vertices[0].Position.X, Vertices[1].Position.X, Vertices[2].Position.X };
             ys = new int[] { Vertices[0].Position.Y, Vertices[1].Position.Y, Vertices[2].Position.Y };
-
         }
 
         public int Area => CalculateTriangleArea();
@@ -45,18 +44,22 @@ namespace BaycentricCoordinateSystem
             return (lambda1, lambda2, lambda3);
         }
 
-        public Color GetPointColor(Point point, Color[] colors)
+        public Color GetPointColor(Point point)
         {
             (float, float, float) lambdas = GetLambdas(point);
             var lambda1 = lambdas.Item1;
             var lambda2 = lambdas.Item2;
             var lambda3 = lambdas.Item3;
 
-            var r = lambda1 * colors[0].R + lambda2 * colors[0].G + lambda3 * colors[0].B;
-            var g = lambda1 * colors[1].R + lambda2 * colors[1].G + lambda3 * colors[1].B;
-            var b = lambda1 * colors[2].R + lambda2 * colors[2].G + lambda3 * colors[2].B;
+            //var r = lambda1 * colors[0].R + lambda2 * colors[0].G + lambda3 * colors[0].B;
+            //var g = lambda1 * colors[1].R + lambda2 * colors[1].G + lambda3 * colors[1].B;
+            //var b = lambda1 * colors[2].R + lambda2 * colors[2].G + lambda3 * colors[2].B;
 
-            return Color.FromArgb((int)(lambda1 * 255), (int)(lambda2 * 255), (int)(lambda3 * 255));
+            float r = lambda1 * Vertices[0].Color.R + lambda2 * Vertices[1].Color.R + lambda3 * Vertices[2].Color.R;
+            float g = lambda1 * Vertices[0].Color.G + lambda2 * Vertices[1].Color.G + lambda3 * Vertices[2].Color.G;
+            float b = lambda1 * Vertices[0].Color.B + lambda2 * Vertices[1].Color.B + lambda3 * Vertices[2].Color.B;
+
+            return Color.FromArgb((int)r, (int)g, (int)b);
         }
         public bool ContainedInTriangle(Point point)
         {

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace BaycentricCoordinateSystem
 {
+    /// <summary>
+    /// Represents a Vertex as a position and color
+    /// </summary>
     class VertexPositionColor
     {
         public Point Position { get; set; }
